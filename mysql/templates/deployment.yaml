@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: roboshop
+  # These labels are replicaset labels reference
+  labels:
+    project: roboshop
+    tier: database
+    component: mysql
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+  # Using these labels, replicaset selects the pod.
+    matchLabels:
+      project: roboshop
+      tier: database
+      component: mysql
+  # This is Pod definition, Pod is subset of replicaset
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        tier: database
+        component: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageVersion }}"  

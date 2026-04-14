@@ -1,0 +1,13 @@
+# A ConfigMap is an object used to store Environment variables, Configuration files, Command-line arguments as key–value pairs.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shipping
+  namespace: roboshop
+  labels:
+    project: roboshop
+    tier: backend
+    component: shipping
+data:
+  CART_ENDPOINT: {{ .Values.configMap.CART_ENDPOINT }}
+  DB_HOST: {{ .Values.configMap.DB_HOST }}

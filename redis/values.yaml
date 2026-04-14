@@ -1,0 +1,4 @@
+deployment:
+  replicas: "1"
+  imageName: "redis"
+  imageVersion: "7.0"

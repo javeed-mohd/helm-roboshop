@@ -1,0 +1,13 @@
+# A ConfigMap is an object used to store Environment variables, Configuration files, Command-line arguments as key–value pairs.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rabbitmq
+  namespace: roboshop
+  labels:
+    project: roboshop
+    tier: database
+    component: rabbitmq
+data:
+  RABBITMQ_DEFAULT_USER: {{ .Values.configMap.RABBITMQ_DEFAULT_USER }}
+  RABBITMQ_DEFAULT_PASS: {{ .Values.configMap.RABBITMQ_DEFAULT_PASS }}

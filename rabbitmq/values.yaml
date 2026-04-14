@@ -1,0 +1,7 @@
+configMap:
+  RABBITMQ_DEFAULT_USER: roboshop
+  RABBITMQ_DEFAULT_PASS: roboshop123
+deployment:
+  replicas: "1"
+  imageName: "rabbitmq"
+  imageVersion: "3"

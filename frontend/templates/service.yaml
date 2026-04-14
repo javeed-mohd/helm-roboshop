@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: roboshop
+  labels:
+    project: roboshop
+    tier: frontend
+    component: frontend
+spec:
+  # We will be exposing the application externally to internet using LoadBalancer.
+  type: LoadBalancer
+  selector:
+    # Labels are used as selectors.
+    project: roboshop
+    tier: frontend
+    component: frontend
+  ports:
+  - protocol: TCP
+    port: 80            # Service Port
+    targetPort: 80      # Container Port 

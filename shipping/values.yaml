@@ -1,0 +1,7 @@
+configMap:
+  CART_ENDPOINT: "cart:8080"
+  DB_HOST: "mysql"
+deployment:
+  replicas: "1"
+  imageName: "javeedmohd214/shipping"
+  imageVersion: "1.4.0"

@@ -1,0 +1,4 @@
+deployment:
+  replicas: "1"
+  imageName: "javeedmohd214/mysql"
+  imageVersion: "1.4.0"
