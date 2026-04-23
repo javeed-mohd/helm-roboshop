@@ -35,8 +35,8 @@ spec:
             cpu: "100m"
           # Hard limit
           limits:
-            memory: "128Mi"
-            cpu: "100m"
+            memory: "256Mi"
+            cpu: "120m"
         # A readiness probe checks whether a container is ready to accept traffic. If it fails, K8s stops sending requests to that container.
         readinessProbe:
           # httpGet:
