@@ -2,4 +2,4 @@ apiVersion: v2      # K8s Helm related
 name: shipping
 version: 0.0.1      # This is Chart version
 appVersion: 1.4.0   # This is application version
-description: "Installing Shippping 1.4.0"
+description: "Installing Shipping 1.4.0"
