@@ -64,4 +64,8 @@ spec:
         #   # By default it mounts and thinks as directory
         #   mountPath: "/etc/nginx/nginx.conf"
         #   subPath: nginx.conf
-        #   readOnly: true  
+        #   readOnly: true
+        # envFrom is used in a Pod specifications to load all key–value pairs from a ConfigMap or Secret as environment variables into a container.
+        envFrom:
+        - configMapRef:
+            name: frontend
